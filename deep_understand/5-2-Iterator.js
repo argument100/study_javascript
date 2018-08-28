@@ -40,4 +40,49 @@ const func522 = () => {
   }
 }
 
-func522();
+// func522();
+
+const func541 = () => {
+  let arr = ['hoge', 'fuga', 'boo'];
+  for (let val of arr) {
+    mod.p(val);
+  }
+}
+
+func541();
+
+const func542 = () => {
+  let arr = ['hoge', 'fuga', 'boo'];
+  for (let val of arr.keys()) {
+    mod.p(val);
+  }
+}
+
+func542();
+
+const func543 = () => {
+  let arr = ['hoge', 'fuga', 'boo'];
+  for (let val of arr.entries()) {
+    mod.p(val);
+  }
+}
+
+func543();
+
+const func544 = () => {
+  let arr1 = ['a', 'b', 'c'];
+  let arr2 = [1, 2, 3];
+  let mergeArr = [...arr1, ...arr2];
+  mod.p(mergeArr);
+}
+
+func544();
+
+
+
+
+
+
+
+
+
