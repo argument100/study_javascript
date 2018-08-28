@@ -49,7 +49,7 @@ const func541 = () => {
   }
 }
 
-func541();
+// func541();
 
 const func542 = () => {
   let arr = ['hoge', 'fuga', 'boo'];
@@ -58,7 +58,7 @@ const func542 = () => {
   }
 }
 
-func542();
+// func542();
 
 const func543 = () => {
   let arr = ['hoge', 'fuga', 'boo'];
@@ -67,7 +67,7 @@ const func543 = () => {
   }
 }
 
-func543();
+// func543();
 
 const func544 = () => {
   let arr1 = ['a', 'b', 'c'];
@@ -76,7 +76,57 @@ const func544 = () => {
   mod.p(mergeArr);
 }
 
-func544();
+// func544();
+
+const func551 = () => {
+  let str = 'ABC';
+  for (let val of str) {
+    mod.p(val);
+  }
+}
+
+// func551();
+
+const func552 = () => {
+  let str1 = 'ABC';
+  let str2 = 'zzz';
+
+  mod.p([...str1, ...str2]);
+}
+
+// func552();
+
+const func561 = () => {
+  for (let val of arguments) {
+    mod.p(val);
+  }
+}
+
+// func561('hoge', false, 999);
+
+const func562 = () => {
+  mod.p([...arguments]);
+}
+
+// func562('hoge', false, 999);
+
+const func563 = () => {
+  let args = [1, 2, 3, 4, 5];
+  mod.p(Math.min(...args));
+}
+
+func563();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
