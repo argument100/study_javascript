@@ -100,4 +100,46 @@ const func762 = () => {
   mod.p(human.name);
 };
 
-func762();
+// func762();
+
+const func763 = () => {
+  let human = {
+    name: 'igarashi'
+  };
+
+  let descriptor = Object.getOwnPropertyDescriptor(human, 'name');
+  mod.p(descriptor.value); // igarashi
+  mod.p(descriptor.enumerable); // true
+  mod.p(descriptor.writable); // true
+  mod.p(descriptor.configurable); // true
+
+  let human2 = {
+    name: 'tarama'
+  }
+
+  Object.defineProperty(human2, 'name', {
+    enumerable: false,
+    configurable: false
+  });
+
+  let descriptor2 = Object.getOwnPropertyDescriptor(human2, 'name');
+  mod.p(descriptor2.value); // igarashi
+  mod.p(descriptor2.enumerable); // false
+  mod.p(descriptor2.writable); // true
+  mod.p(descriptor2.configurable); // false
+}
+
+func763();
+
+
+
+
+
+
+
+
+
+
+
+
+
