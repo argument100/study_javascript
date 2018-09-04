@@ -58,4 +58,51 @@ const func831 = () => {
   mod.p('age' in human); // true
 };
 
-func831();
+// func831();
+
+
+/**
+ * 8-4. オブジェクトの凍結
+ **/
+
+const func841 = () => {
+  let human = {
+    name: 'igarashi'
+  };
+
+  mod.p(Object.isFrozen(human)); // false
+
+  // プロパティを変更する
+  human.name = 'tarama';
+
+  mod.p(human.name); // tarama
+
+  // オブジェクトを凍結
+  Object.freeze(human);
+
+  mod.p(Object.isFrozen(human)); // true
+
+  // プロパティの変更を試みる
+  human.name = 'masaru'; // Strictモードの場合、ここでエラー
+
+  mod.p(human.name); // tarama
+};
+
+func841();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
