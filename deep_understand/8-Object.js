@@ -88,9 +88,45 @@ const func841 = () => {
   mod.p(human.name); // tarama
 };
 
-func841();
+// func841();
 
+/**
+ * 8-5. オブジェクトの凍結
+ **/
 
+const func851 = () => {
+  let Phone = {
+    name: 'my phone',
+    call: function() {
+      mod.p(`...${this.name} is Calling`);
+    }
+  };
+
+  // オブジェクトの継承
+  let Phone2 = Object.create(Phone);
+  Phone2.call(); // ...my phone is Calling
+
+  // オブジェクトを継承して、プロパティも指定
+  let SmartPhone = Object.create(Phone, {
+    name: {
+      value: 'SmartPhone',
+      writable: true,
+      configurable: true,
+      enumerable: true
+    },
+    type: {
+      value: 'Android',
+      writable: false,
+      configurable: false,
+      enumerable: true
+    }
+  });
+
+  mod.p(SmartPhone.type); // Android
+  SmartPhone.call(); // ...Smartphone is Calling
+}
+
+func851();
 
 
 
