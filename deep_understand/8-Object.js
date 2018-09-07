@@ -126,9 +126,16 @@ const func851 = () => {
   SmartPhone.call(); // ...Smartphone is Calling
 }
 
-func851();
+// func851();
 
+const func852 = () => {
+  let nakedObj = Object.create(null);
 
+  mod.p('valueOf' in nakedObj); // false
+  mod.p('toString' in nakedObj); // false
+}
+
+func852();
 
 
 
