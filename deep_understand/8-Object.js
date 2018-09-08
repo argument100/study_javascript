@@ -135,8 +135,21 @@ const func852 = () => {
   mod.p('toString' in nakedObj); // false
 }
 
-func852();
+// func852();
 
+const func861 = () => {
+  try {
+    hoge;
+  } catch(e) {
+    mod.p(e.message); // hoge is not defined
+    mod.p(e instanceof Error); // true
+    mod.p(e instanceof ReferenceError); // true
+  } finally {
+    mod.p('end'); //end
+  }
+}
+
+func861();
 
 
 
