@@ -149,8 +149,31 @@ const func861 = () => {
   }
 }
 
-func861();
+// func861();
 
+const func862 = () => {
+  try {
+    throw 'hoge';
+  } catch(e) {
+    mod.p(e); // hoge
+    mod.p(e.message); // undefined
+    mod.p(e instanceof Error); // false
+  }
+};
+
+//func862();
+
+const func863 = () => {
+  // throw new Error('エラーが発生しました');
+
+  let err = new Error();
+
+  err.message = 'エラーが発生しました！';
+
+  throw err;
+}
+
+func863();
 
 
 
