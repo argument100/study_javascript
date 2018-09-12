@@ -75,6 +75,45 @@ class Human942 {
   }
 }
 
+/*
 let igarashi42 = new Human942('igarashi');
 let tarama42 = new Human942('tarama');
 console.log(Human942.getCount()); // 2
+*/
+
+class Phone {
+  constructor(name) {
+    this.name = name;
+  }
+  call() {
+    console.log('発信します');
+  }
+}
+
+// Phoneクラスを継承したクラス
+class SmartPhone extends Phone {
+  constructor(name, type) {
+    super(name);
+    this.type = type;
+    this.callCount = 0;
+  }
+  showInfo() {
+    console.log(`Name: ${this.name} type: ${this.type}`);
+  }
+
+  // メソッドのオーバーライド
+  call() {
+    // 親クラスのメソッド呼び出し
+    super.call();
+    this.callCount += 1;
+  }
+}
+
+let myPhone = new SmartPhone('XXXX', 'YYYY');
+myPhone.showInfo(); // Name: XXXX type: YYYY
+myPhone.call(); // 発信します
+console.log(myPhone.callCount); // 1
+
+let myPhone2 = new SmartPhone('XXXX', 'YYYY');
+myPhone2.call(); // 発信します
+console.log(myPhone2.callCount); // 1
