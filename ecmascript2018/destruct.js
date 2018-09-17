@@ -26,5 +26,7 @@ console.log(x); // ほげ
 let {hoge = 'ほげほげ', foo} = {foo: 'ふー'};
 console.log(hoge); // ほげほげ
 
-
+let {hoge, ...other} = {hoge: 'ほげ', foo: 'ふー', piyo: 'ピヨ'};
+console.log(hoge); // ほげ
+console.log(other); // {foo: 'ふー', piyo: 'ピヨ'}
 
